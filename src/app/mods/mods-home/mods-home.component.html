@@ -1,0 +1,24 @@
+<app-divider>
+    Modal Component
+</app-divider>
+<button (click)="onClicked()">Show Model</button>
+<app-modal (close)="onClicked()" *ngIf="showModel">
+    <div headerPart>
+        Profile Picture
+    </div>
+    <div class="ui header">We've auto-chosen a profile image for you.</div>
+    <p>We've grabbed the following image from the <a href="https://www.gravatar.com"
+            target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+    <p>Is it okay to use this photo?</p>
+    <div footerPart>
+        <button class="ui button" (click)="onClicked()">
+            Close
+        </button>
+    </div>
+</app-modal>
+
+
+<app-divider>
+    Accordion Component
+</app-divider>
+<app-accordion [items] ="items"></app-accordion>
